@@ -1,6 +1,7 @@
 [build]
 builder = "dockerfile"
-dockerfilePath = "Dockerfile"
+dockerfilePath = "./Dockerfile"
+watchPatterns = ["**/*.py", "requirements.txt", "Dockerfile"]
 
 [deploy]
 healthcheckPath = "/health"
@@ -17,6 +18,7 @@ rootDirectory = "naver-blog-admin"
 
 [services.build]
 builder = "dockerfile"
+dockerfilePath = "./Dockerfile"
 
 [[services.variables]]
 name = "PORT"
