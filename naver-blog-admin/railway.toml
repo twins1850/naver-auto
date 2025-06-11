@@ -1,0 +1,31 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+healthcheckPath = "/health"
+healthcheckTimeout = 100
+restartPolicyType = "on_failure"
+startCommand = "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+
+[[services]]
+name = "naver-blog-backend"
+
+[services.source]
+repo = "twins1850/naver-auto"
+rootDirectory = "naver-blog-admin"
+
+[services.build]
+builder = "dockerfile"
+
+[[services.variables]]
+name = "PORT"
+value = "8000"
+
+[[services.variables]]
+name = "DATABASE_URL"
+value = "sqlite:///./license_server.db"
+
+[[services.variables]]
+name = "SECRET_KEY"
+value = "naver-blog-pro-super-secret-key-2025" 

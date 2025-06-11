@@ -1,0 +1,36 @@
+# Railway 배포용 환경변수 설정
+
+## 🔧 백엔드 API (naver-blog-backend)
+DATABASE_URL=sqlite:///./license_server.db
+SECRET_KEY=naver-blog-pro-super-secret-key-2025
+ADMIN_EMAIL=admin@autotoolshub.com
+ADMIN_PASSWORD=AutoToolsHub2025!
+CORS_ORIGINS=["https://autotoolshub.com","https://admin.autotoolshub.com","https://www.autotoolshub.com"]
+EMAIL_SMTP_SERVER=smtp.gmail.com
+EMAIL_SMTP_PORT=587
+EMAIL_USERNAME=your-gmail@gmail.com
+EMAIL_PASSWORD=your-app-password
+GOOGLE_SHEETS_CREDENTIALS_JSON={"type":"service_account",...}
+
+## 🎨 관리자 GUI (naver-blog-admin-gui)
+VITE_API_URL=https://api.autotoolshub.com
+NODE_ENV=production
+VITE_WS_URL=wss://api.autotoolshub.com/ws
+
+## 🌐 랜딩 페이지 (naverblog-pro-landing)
+NEXT_PUBLIC_API_URL=https://api.autotoolshub.com
+NEXT_PUBLIC_ADMIN_URL=https://admin.autotoolshub.com
+NEXT_PUBLIC_SITE_URL=https://autotoolshub.com
+NEXT_PUBLIC_SUPPORT_EMAIL=support@autotoolshub.com
+TOSS_CLIENT_KEY=your-toss-client-key
+TOSS_SECRET_KEY=your-toss-secret-key
+
+## 📧 이메일 서비스 설정 (Gmail App Password 발급 필요)
+1. Gmail 계정 → 보안 → 2단계 인증 활성화
+2. 앱 비밀번호 생성 → "네이버블로그자동화" 앱 등록
+3. 생성된 16자리 비밀번호를 EMAIL_PASSWORD에 입력
+
+## 📊 Google Sheets API 설정
+1. Google Cloud Console → API 및 서비스 → 사용자 인증 정보
+2. 서비스 계정 생성 → JSON 키 파일 다운로드
+3. JSON 내용을 GOOGLE_SHEETS_CREDENTIALS_JSON에 입력 

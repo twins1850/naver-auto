@@ -1,0 +1,104 @@
+# 🚀 Naver Blog Automation - Clean Repository
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment Variables
+.env
+.env.local
+.env.production
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.next/
+out/
+
+# Build outputs
+dist/
+build/
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 큰 파일들 (100MB 제한)
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.app/
+*.exe
+*.dmg
+*.pkg
+
+# 배포 파일들
+naver_blog_hybrid/release/
+naver_blog_hybrid/dist/
+naver-blog-admin/static/downloads/
+**/NaverBlogAuto*
+**/playwright/driver/node*
+
+# 백업 폴더들
+*backup*/
+*-backup/
+*_backup/
+
+# 임시 파일들
+*.tmp
+*.temp
+.cache/
+
+# 테스트 커버리지
+coverage/
+.coverage
+.nyc_output
+
+# Chrome 프로필 (개발용)
+chrome_debug_profile/
+chrome_temp_profile/ 
